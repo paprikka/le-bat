@@ -1,0 +1,75 @@
+// @import "vendor/styles/bootstrap/_compass_twitter_bootstrap_awesome.scss";
+// @import "vendor/styles/bootstrap/_compass_twitter_bootstrap_responsive.scss";
+@import "compass";
+
+@import "colors";
+@import "layout";
+
+
+
+
+.btn, input[type="text"]{
+  @include border-radius(1px);
+}
+
+.blur-picker {
+    -webkit-appearance: none;
+    background-color: transparent;
+    height:8px;
+    border-radius:100px;
+    box-shadow:0 1px 2px black inset;
+    border: 1px solid #232323;
+    @include transition(.2s box-shadow, .2s background);
+    &:hover{
+      
+      background-color: transparentize($blue, .8);
+    }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #444;
+    width: 14px;
+    height: 14px;
+    border-radius:100px;
+    @include box-shadow(
+      0 1px 1px rgba(255,255,255,.2) inset, 
+      0 1px 1px rgba(0,0,0,.4),
+      0 2px 1px rgba(0,0,0,.1),
+      0 3px 5px rgba(0,0,0,.1)
+      );
+    
+
+    @include transition(.2s box-shadow, .2s background);
+  
+    &:hover{
+      background-color: $blue;
+      @include box-shadow(transparentize($blue, .7) 0 0 4px, transparentize($blue, .7) 0 0 14px);
+    }
+  }
+
+
+@import "pages/preview";
+
+.navbar{
+  input[type="text"]{
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.1);
+    color: #dadada;
+  }
+}
+
+.navbar-inverse .brand{
+  padding: 4px;
+  // background-color: black;
+}
+.avatar-icon{
+  @include border-radius(100px);
+  @include box-shadow(0 -1px 2px rgba(255,255,255,.1));
+  overflow: hidden;
+  @include transition(.4s ease-out);
+  &:hover{
+  @include transform(rotate(360deg));
+    
+  }
+}

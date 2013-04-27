@@ -1,0 +1,16 @@
+include head
+body
+  .wrapper
+   
+    .container.main-content
+      .main-content-view-wrapper
+        div(ng-view).subpage-content
+
+  footer.navbar.navbar-fixed-bottom.navbar-inverse
+    .navbar-inner
+      .container
+        ul.nav: li: a(href="http://flavors.me/rpastuszak") Rafal Pastuszak
+
+  //- JavaScript at the bottom for fast page loading
+  script(src='/js/vendor.js')
+  script(src='/js/app.js')

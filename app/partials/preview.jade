@@ -1,0 +1,29 @@
+//- {{getPreviewStyle() | json}}
+//- div(ng-include="'/partials/nav.html'")
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      button.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href='http://flavors.me/rpastuszak', title="Rafal Pastuszak").brand: img(src="img/avatar_normal.png", width="32", height="32").avatar-icon
+      .nav-collapse
+        ul.nav
+          li(ng-class="getClass('#/preview')")
+            a(ng-href='#/preview') Preview
+          li(ng-class="getClass('/about')")
+            a(ng-click="currentBlurValue=0; currentPreviewSrc='https://coderwall.com/p/x8xgjw'") Info
+          li(ng-class="getClass('/about')")
+            a(ng-href="https://github.com/paprikka/contrast-tester", target="_blank") Source
+      form.navbar-form.pull-right(ng-submit="reloadPage()")
+        span.btn-group
+          button(ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 0}", ng-click="currentBlurValue = 0") None
+          button(ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 4}", ng-click="currentBlurValue = 4") Lo
+          button(ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 20}", ng-click="currentBlurValue = 20") Hi
+        //- span.label {{currentBlurValue}}
+        input(type="range", min="0", max="40", ng-model="currentBlurValue").input-small.blur-picker
+        input(type="text", placeholder="Website url", ng-model="newPreviewSrc").input-xlarge
+        button(type="submit").btn.btn-inverse: i.icon-refresh
+
+iframe(src="http://techcrunch.com", ng-style="getPreviewStyle()", src="{{currentPreviewSrc}}").preview-box
