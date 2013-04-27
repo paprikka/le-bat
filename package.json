@@ -1,12 +1,12 @@
 {
-  "author": "Scott Coates <scoarescoare@gmail.com>",
-  "name": "angular-brunch-seed",
-  "description": "AngularJS + Brunch + SASS",
+  "author": "Rafal Pastuszak <rafal@paprikka.pl>",
+  "name": "le-bat",
+  "description": "A quick way to analyse contrast in your application.",
   "version": "0.0.1",
-  "homepage": "https://github.com/scoarescoare/angular-brunch-true-north",
+  "homepage": "http://paprikka.github.io/le-bat/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scoarescoare/angular-brunch-true-north"
+    "url": "https://github.com/paprikka/le-bat"
   },
   "engines": {
     "node": "~0.6.10 || 0.8 || 0.9"

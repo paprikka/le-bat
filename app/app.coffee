@@ -20,9 +20,9 @@ App.config([
 
     $routeProvider
 
-      .when('/preview/:src', {templateUrl: '/partials/preview.html',
+      .when('/preview/:src', {templateUrl: 'partials/preview.html',
       controller: 'PreviewCtrl'})
-      .when('/preview', {templateUrl: '/partials/preview.html',
+      .when('/preview', {templateUrl: 'partials/preview.html',
       controller: 'PreviewCtrl'})
 
     # Catch all
