@@ -1,0 +1,19 @@
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container"><a href="/" title="Rafal Pastuszak" class="brand"><img src="img/avatar_normal.png" width="32" height="32" class="avatar-icon"/></a>
+      <ul class="nav">
+        <li ng-class="getClass('/preview')"><a ng-href="#/preview">Preview</a></li>
+        <li ng-class="getClass('/about')"><a ng-href="#/view1">Info</a></li>
+      </ul>
+      <form ng-submit="reloadPage()" class="navbar-form pull-right"><span class="btn-group">
+          <button class="btn btn-small">None</button>
+          <button class="btn btn-small">Lo</button>
+          <button class="btn btn-small">Hi</button></span><span class="label">{{currentBlurValue}}</span>
+        <input type="range" min="0" max="40" ng-model="currentBlurValue" class="input-small"/>
+        <input type="text" placeholder="Website url" ng-model="newPreviewSrc" class="input-xxlarge"/>
+        <button type="submit" class="btn btn-inverse"><i class="icon-refresh"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
