@@ -1,4 +1,4 @@
-angular.module('app.controllers.PreviewCtrl', [])
+angular.module('app.controllers', [])
 .controller('PreviewCtrl', [
   '$scope'
   '$routeParams'
@@ -8,11 +8,13 @@ angular.module('app.controllers.PreviewCtrl', [])
   if $routeParams['src']
     $scope.newPreviewSrc = $routeParams['src']
   $scope.currentBlurValue = 0
+
   $scope.getPreviewStyle = ->
     blur = "blur(#{$scope.currentBlurValue}px)"
     style =
       '-webkit-filter': blur
       '-moz-filter':    blur
+      '-o-filter':      blur
       '-ms-filter':     blur
       'filter':         blur
     style
