@@ -8,7 +8,7 @@
 
 
 
-.btn, input[type="text"]{
+.btn-group .btn, .btn, input[type="text"]{
   @include border-radius(1px);
 }
 

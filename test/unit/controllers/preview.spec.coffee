@@ -25,13 +25,21 @@ describe "controllers", ->
 
     describe "getPreviewStyle method", ->
 
-      it "should return style definitions", ->
+      it "should return style definitions with blur", ->
         scope.currentBlurValue = 10
         style = scope.getPreviewStyle()
 
         expect(style['-webkit-filter']).toEqual "blur(10px)" 
 
+      it "should return style definitions with grayscale mode", ->
+        scope.currentBlurValue = 10
+        scope.bwEnabled = yes
+        style = scope.getPreviewStyle()
+        expect(style['-webkit-filter']).toEqual "blur(10px) saturate(0)" 
+
+
       it "should be cross-browser compatible (futureproof)", ->
+        scope.bwEnabled = no
         scope.currentBlurValue = 10
         style = scope.getPreviewStyle()
         prefixes = ['-webkit-', '-moz-', '-ms-', '', '-o-']

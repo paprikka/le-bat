@@ -1,3 +1,30 @@
 .preview-box{
   @include transition(.7s all);
+
+}
+
+
+
+.toggle-bw{
+  &.active{
+    .le-dot{
+      box-shadow: 
+        rgb(255, 73, 109) 0 0 18px,
+        rgb(255, 73, 109) 0 0 10px,
+        rgb(255, 124, 171) 0 0 30px,
+        rgb(254, 77, 119) 0 0 18px, 
+        rgb(255, 53, 53) 0 0 21px;
+      background-color: rgb(228, 81, 81);
+    }  
+  }
+  .le-dot{
+    border-radius: 100px;
+    margin-left: 8px;
+    @include transition(.3s);
+    background-color: rgba(255,255,255,.1);
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+
+  }
 }
