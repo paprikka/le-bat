@@ -10,7 +10,8 @@
           <li ng-class="getClass('/about')"><a ng-href="https://github.com/paprikka/le-bat" target="_blank">Source</a></li>
         </ul>
       </div>
-      <form ng-submit="reloadPage()" class="navbar-form pull-right"><span class="btn-group">
+      <form ng-submit="reloadPage()" class="navbar-form pull-right">
+        <button ng-class="{'btn btn-inverse btn-small toggle-bw':true, active:bwEnabled}" ng-click="bwEnabled = !bwEnabled">Grayscale <span class="le-dot"></span></button>&nbsp;<span class="btn-group">
           <button ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 0}" ng-click="currentBlurValue = 0">None</button>
           <button ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 4}" ng-click="currentBlurValue = 4">Lo</button>
           <button ng-class="{'btn btn-small btn-inverse':true, active: currentBlurValue == 20}" ng-click="currentBlurValue = 20">Hi</button></span>
