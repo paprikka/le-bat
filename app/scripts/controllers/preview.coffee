@@ -4,7 +4,7 @@ angular.module('app.controllers', [])
   '$routeParams'
 
 ($scope, $routeParams) ->
-  $scope.newPreviewSrc = 'http://twitter.github.io/bootstrap'
+  $scope.newPreviewSrc = 'http://twitter.github.io/bootstrap/'
   if $routeParams['src']
     $scope.newPreviewSrc = $routeParams['src']
   $scope.currentBlurValue = 0
